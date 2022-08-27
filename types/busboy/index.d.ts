@@ -38,7 +38,7 @@ declare namespace busboy {
          *
          * @default Infinity
          */
-        fileSize?: number | undefined;
+        fileSize?: number | ((req: Express.Request) => number) | undefined;
 
         /**
          * For multipart forms, the max number of file fields.
